@@ -23,14 +23,14 @@ public class DatabaseConnector {
     */
 
     //Prerequisites
-    private static final String JDB_DATABASE = "jvak_users";
+    private static final String JDB_DATABASE = "chat_server";
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/" + JDB_DATABASE;
 
     private static final String DB_TABLE = "users";
 
-    private static final String DB_USER = "jvak_users";
-    private static final String DB_PASS = "Wl<Ewv;0Ss/5";
+    private static final String DB_USER = "chatServer";
+    private static final String DB_PASS = "testpassword";
 
     private static Connection dbConnection = null;
     private static Statement dbStatement = null;
