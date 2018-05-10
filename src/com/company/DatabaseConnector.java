@@ -30,7 +30,7 @@ public class DatabaseConnector {
     private static final String DB_TABLE = "users";
 
     private static final String DB_USER = "chatServer";
-    private static final String DB_PASS = "testpassword";
+    private static final String DB_PASS = "testPassword";
 
     private static Connection dbConnection = null;
     private static Statement dbStatement = null;
