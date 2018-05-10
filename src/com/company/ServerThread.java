@@ -21,7 +21,7 @@ public class ServerThread extends Thread {
     public ServerThread(String name) {
         super(name);
         try {
-            serverSocket = new DatagramSocket(4000);
+            serverSocket = new DatagramSocket(3000);
             serverSocket.setSoTimeout(1000);
         } catch (SocketException e) {
             e.printStackTrace();
@@ -68,8 +68,10 @@ public class ServerThread extends Thread {
 
         switch (prefix) {
             case API.PREFIX_LOGIN:
-                userName = payload.split(",")[0];
-                String password = payload.split(",")[1];
+            	String[] payloadElements = payload.split(",");
+            	
+                userName = payloadElements[0];
+                String password = payloadElements[1];
 
                 boolean isLoginSuccessfull = chatManager.login(userName, password, ipAddress);
 
