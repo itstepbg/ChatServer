@@ -3,6 +3,8 @@ package com.company;
 import java.io.IOException;
 import java.util.Scanner;
 
+import com.company.managers.UserManager;
+
 public class Main {
 
     //Init running and assign true so that we can loop with (while)

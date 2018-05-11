@@ -1,6 +1,8 @@
-package com.company;
+package com.company.managers;
 
+import com.company.DatabaseConnector;
 import com.company.model.User;
+import com.company.util.Sha1Hash;
 
 import java.sql.SQLException;
 import java.util.HashMap;
@@ -37,12 +39,13 @@ public class UserManager {
 
     public void addUserToDb(String username, String password, String email) {
         try {
+        	String passwordHash = Sha1Hash.hashPassword(password);
 
             //First add the user to the database.
-            DatabaseConnector.addUserToDatabase(username, password, email);
+            DatabaseConnector.addUserToDatabase(username, passwordHash, email);
 
             //Then create one user in UserManager.
-            this.createUser(username, password, email, true);
+            this.createUser(username, passwordHash, email, true);
 
         } catch (SQLException e) {
             //e.printStackTrace();

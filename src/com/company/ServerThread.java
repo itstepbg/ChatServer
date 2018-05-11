@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.managers.ChatManager;
 import com.company.model.API;
 
 import java.io.BufferedReader;

@@ -1,4 +1,4 @@
-package com.company;
+package com.company.managers;
 
 import com.company.model.User;
 

@@ -2,6 +2,8 @@ package com.company;
 
 import java.sql.*;
 
+import com.company.managers.UserManager;
+
 public class DatabaseConnector {
     /*
     Steps:
